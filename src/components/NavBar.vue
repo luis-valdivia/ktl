@@ -4,6 +4,7 @@ export default {
     return {
       isNavHidden: false,
       prevScrollpos: window.pageYOffset,
+      mobileMenuOpen: false,
     }
   },
   mounted() {
@@ -22,6 +23,12 @@ export default {
       }
       this.prevScrollpos = currentScrollPos
     },
+    toggleMobileMenu() {
+      this.mobileMenuOpen = !this.mobileMenuOpen
+    },
+    closeMobileMenu() {
+      this.mobileMenuOpen = false
+    }
   },
 }
 </script>
@@ -41,35 +48,102 @@ export default {
             alt="Logo"
           >
         </div>
-        <!-- Navigation links -->
+
+        <!-- Desktop Navigation -->
         <div class="hidden md:block">
           <div class="ml-10 flex items-baseline space-x-4">
             <a
               href="/"
-              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-medium"
+              class="nav-link"
             >Home</a>
             <a
               href="/services"
-              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-medium"
+              class="nav-link"
             >Services</a>
             <a
               href="/about"
-              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-medium"
+              class="nav-link"
             >About Us</a>
             <a
               href="/contact"
-              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-medium"
+              class="nav-link"
             >Contact Us</a>
           </div>
         </div>
+
+        <!-- Mobile Hamburger -->
+        <div class="md:hidden">
+          <button
+            class="text-gray-200 hover:text-white focus:outline-none"
+            @click="toggleMobileMenu"
+          >
+            <svg
+              class="h-8 w-8"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
+
+    <!-- Mobile Menu Overlay -->
+    <transition name="fade">
+      <div
+        v-if="mobileMenuOpen"
+        class="md:hidden fixed inset-0 bg-gray-800 bg-opacity-90 z-20 flex flex-col items-center justify-center space-y-6 text-white text-xl"
+      >
+        <a
+          href="/"
+          class="hover:underline"
+          @click="closeMobileMenu"
+        >Home</a>
+        <a
+          href="/services"
+          class="hover:underline"
+          @click="closeMobileMenu"
+        >Services</a>
+        <a
+          href="/about"
+          class="hover:underline"
+          @click="closeMobileMenu"
+        >About Us</a>
+        <a
+          href="/contact"
+          class="hover:underline"
+          @click="closeMobileMenu"
+        >Contact Us</a>
+        <button
+          class="absolute top-6 right-6 text-3xl"
+          @click="closeMobileMenu"
+        >
+          &times;
+        </button>
+      </div>
+    </transition>
   </nav>
 </template>
-     
+
 <style scoped>
 .nav-hidden {
   transform: translateY(-100%);
   transition: transform 0.4s ease-in-out;
+}
+
+.nav-link {
+  @apply text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-medium;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.4s ease;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
 }
 </style>
