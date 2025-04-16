@@ -14,28 +14,47 @@ export default {
 </script>
 
 <template>
-  <div class="flex justify-center items-center h-screen">
-    <div class="w-full max-w-screen-xl mx-auto px-6">
-      <div class="flex flex-col items-center justify-center text-center">
-        <!-- <img
+  <div>
+    <div class="flex justify-center items-center h-screen">
+      <div class="w-full max-w-screen-xl mx-auto px-6">
+        <div class="flex flex-col items-center justify-center text-center">
+          <!-- <img
           src="../assets/hero.JPG"
           alt="Image"
           class="max-w-xl h-auto mb-6"
         > -->
-        <h1
-          ref="title"
-          class="hero-title"
-        >
-          <span
-            v-for="(letter, index) in catchphrase"
-            :key="index"
-            class="text-gray-800 italic"
-            :style="{ 'animation-delay': `${index * 50}ms` }"
+          <h1
+            ref="title"
+            class="hero-title md:text-3xl lg:text-5xl"
           >
-            {{ letter }}
-          </span>
-        </h1>
+            <span
+              v-for="(letter, index) in catchphrase"
+              :key="index"
+              class="text-gray-800 italic"
+              :style="{ 'animation-delay': `${index * 50}ms` }"
+            >
+              {{ letter }}
+            </span>
+          </h1>
+        </div>
       </div>
+    </div>
+    <!-- Scroll Prompt -->
+    <div class="mt-20 text-center animate-bounce opacity-70">
+      <p class="text-lg font-medium text-gray-100">
+        Scroll down to see the magic happen
+      </p>
+      <svg
+        class="w-6 h-6 mx-auto mt-2 text-gray-100"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M19 9l-7 7-7-7" />
+      </svg>
     </div>
   </div>
 </template>
@@ -47,7 +66,7 @@ h1 span {
 }
 
 .hero-title {
-  font-size: 2rem;
+  /* font-size: 2rem; */
   margin-bottom: 2rem;
   white-space: nowrap;
   overflow: hidden;
@@ -71,4 +90,3 @@ h1 span {
   }
 }
 </style>
-  

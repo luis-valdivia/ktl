@@ -1,7 +1,7 @@
 <template>
   <div class="text-center text-green-800 py-8">
     <h2 class="text-2xl font-bold mb-4">
-      Get In Touch
+      Get In Touch!
     </h2>
     <p class="mb-2">
       📍 Durham, NC
