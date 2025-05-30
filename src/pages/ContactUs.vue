@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-16 px-4 md:px-12 py-12 bg-green-50">
+  <div class="space-y-16 px-4 md:px-12 py-12">
     <ContactInfo />
     <!-- <ContactForm /> -->
     <MapEmbed />

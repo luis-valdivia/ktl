@@ -1,18 +1,25 @@
 <template>
   <section class="py-12 bg-green-50 rounded-2xl shadow-md">
-    <h2 class="text-3xl font-bold text-center text-green-800 mb-8">
+    <h2 
+      style="color: var(--rich-black);"
+      class="text-3xl font-bold text-center mb-8"
+    >
       Our Services
     </h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
       <div
         v-for="(service, index) in services"
         :key="index"
-        class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition"
+        style="background-color: var(--cadet-gray);"
+        class="p-6 rounded-xl shadow hover:shadow-lg transition"
       >
-        <h3 class="text-xl font-semibold text-green-700 mb-2">
+        <h3 
+          style="color: var(--lavender-pink);"
+          class="text-xl font-semibold text-green-700 mb-2"
+        >
           {{ service.title }}
         </h3>
-        <p class="text-gray-600 text-sm">
+        <p class="text-white text-sm">
           {{ service.description }}
         </p>
       </div>

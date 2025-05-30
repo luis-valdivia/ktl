@@ -3,10 +3,14 @@
 @import 'tailwindcss/utilities';
 
 :root {
+  --lavender-pink: #F4B7D9ff;
+  --rich-black: #0A0F16ff;
+  --cadet-gray: #788B98;
+  
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: rgb(30 102 61);
+  background-color: var(--cadet-gray);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

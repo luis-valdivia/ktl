@@ -2,7 +2,8 @@
 export default {
   data() {
     return {
-      catchphrase: 'In case of lawn care, call the lawn bear!',
+      catchphrase_part_1: 'In case of lawn care...',
+      catchphrase_part_2: '...call the lawn bear!',
     }
   },
   mounted() {
@@ -15,6 +16,16 @@ export default {
 
 <template>
   <div>
+    <img
+      src="@/assets/branch.png"
+      alt="left branch"
+      class="floating-branch branch-left"
+    >
+    <img
+      src="@/assets/branch.png"
+      alt="right branch"
+      class="floating-branch branch-right"
+    >
     <div class="flex justify-center items-center h-screen">
       <div class="w-full max-w-screen-xl mx-auto px-6">
         <div class="flex flex-col items-center justify-center text-center">
@@ -25,23 +36,38 @@ export default {
         > -->
           <h1
             ref="title"
-            class="hero-title md:text-3xl lg:text-5xl"
+            class="hero-title text-3xl md:text-7xl lg:text-9xl"
           >
-            <span
-              v-for="(letter, index) in catchphrase"
-              :key="index"
-              class="text-gray-800 italic"
-              :style="{ 'animation-delay': `${index * 50}ms` }"
-            >
-              {{ letter }}
-            </span>
+            <div class="mr-10">
+              <span
+                v-for="(letter, index) in catchphrase_part_1"
+                :key="index"
+                class="text-gray-100 italic"
+                :style="{ 'animation-delay': `${index * 50 + 150 }ms` }"
+              >
+                {{ letter }}
+              </span>
+            </div>
+            <div class="ml-10">
+              <span
+                v-for="(letter, index) in catchphrase_part_2"
+                :key="index"
+                class="text-gray-100 italic"
+                :style="{ 'animation-delay': `${index * 50 + 1450 }ms` }"
+              >
+                {{ letter }}
+              </span>
+            </div>
           </h1>
         </div>
       </div>
     </div>
     <!-- Scroll Prompt -->
-    <div class="mt-20 text-center animate-bounce opacity-70">
-      <p class="text-lg font-medium text-gray-100">
+    <div class="-mt-20 mb-20 text-center animate-bounce">
+      <p 
+        style="color: var(--lavender-pink);"
+        class="text-lg font-medium"
+      >
         Scroll down to see the magic happen
       </p>
       <svg
@@ -60,9 +86,55 @@ export default {
 </template>
   
 <style scoped>
+.floating-branch {
+  position: absolute;
+  z-index: 0; /* Behind your text */
+  width: 400px;
+  opacity: 0;
+}
+
+.branch-left {
+  top: 10%;
+  left: -100px;
+  transform: rotate(-15deg);
+  animation-delay: 1s;
+  animation: float-in-left 2s ease forwards;
+}
+
+.branch-right {
+  top: 65%;
+  right: -100px;
+  transform: rotate(15deg) scaleX(-1);
+  animation-delay: 1.5s;
+  animation: float-in-right 2s ease forwards;
+}
+
+@keyframes float-in-left {
+  0% {
+    transform: translateX(-100px) scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes float-in-right {
+  0% {
+    transform: translateX(0) scale(0.9) scaleX(-1);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-100px) scale(1) scaleX(-1);
+    opacity: 1;
+  }
+}
+
 h1 span {
   animation: snake 0.4s ease forwards;
   opacity: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .hero-title {

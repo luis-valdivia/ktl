@@ -4,7 +4,7 @@
     :style="{ backgroundImage: 'url(/assets/services-hero.jpg)' }"
   >
     <div class="bg-black/50 w-full h-full absolute top-0 left-0" />
-    <h1 class="relative z-10 text-4xl md:text-5xl font-bold">
+    <h1 class="relative text-4xl md:text-5xl font-bold">
       Your Yard, Koala-T Crafted
     </h1>
   </div>

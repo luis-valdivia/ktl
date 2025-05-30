@@ -1,6 +1,6 @@
 <template>
   <section class="py-12 bg-white text-center">
-    <h2 class="text-3xl font-bold text-green-800 mb-4">
+    <h2 class="text-3xl font-bold text-black mb-4">
       Why Choose Us
     </h2>
     <ul class="max-w-3xl mx-auto text-left list-disc list-inside text-gray-700 space-y-2">

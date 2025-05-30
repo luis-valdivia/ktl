@@ -1,6 +1,6 @@
 <template>
   <section class="py-12 text-center bg-green-50 rounded-2xl shadow-md">
-    <h2 class="text-3xl font-bold text-green-800 mb-4">
+    <h2 class="text-3xl font-bold text-black mb-4">
       Our Mission
     </h2>
     <p class="max-w-2xl mx-auto text-lg text-gray-700">

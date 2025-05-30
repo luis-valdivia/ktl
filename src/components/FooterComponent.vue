@@ -4,7 +4,9 @@
       <!-- Heading -->
       <div class="text-center md:text-left max-w-2xl px-4">
         <h1 class="text-2xl sm:text-3xl font-semibold">
-          FOLLOW OUR SOCIAL MEDIA CHANNELS TO SEE KOALA T WORK!
+          FOLLOW OUR SOCIAL MEDIA CHANNELS TO SEE KOALA 
+          <span style="color: var(--lavender-pink)">T</span>
+          WORK!
         </h1>
       </div>
 

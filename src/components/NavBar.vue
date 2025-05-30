@@ -35,7 +35,7 @@ export default {
 
 <template>
   <nav
-    class="bg-gray-600 shadow fixed top-0 w-full z-10"
+    class="shadow fixed top-0 w-full z-10"
     :class="{ 'nav-hidden': isNavHidden }"
   >
     <div class="max-w-7xl mx-auto px-3 sm:px-7 lg:px-8">
@@ -74,6 +74,7 @@ export default {
         <!-- Mobile Hamburger -->
         <div class="md:hidden">
           <button
+            style="color: var(--lavender-pink);"
             class="text-gray-200 hover:text-white focus:outline-none"
             @click="toggleMobileMenu"
           >
@@ -131,6 +132,9 @@ export default {
 </template>
 
 <style scoped>
+nav {
+  background: var(--rich-black);
+}
 .nav-hidden {
   transform: translateY(-100%);
   transition: transform 0.4s ease-in-out;
@@ -138,6 +142,7 @@ export default {
 
 .nav-link {
   @apply text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-medium;
+  color: var(--lavender-pink);
 }
 
 .fade-enter-active, .fade-leave-active {
