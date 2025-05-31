@@ -1,5 +1,5 @@
 <template>
-  <section class="py-12 bg-white text-center">
+  <section class="py-12 bg-green-50 text-center">
     <h2 class="text-3xl font-bold text-black mb-4">
       Why Choose Us
     </h2>

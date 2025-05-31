@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full min-h-screen flex items-start justify-center pt-[100px]">
+  <div class="w-full flex items-start justify-center pt-[100px]">
     <div class="relative w-full flex justify-center h-[100vh]">
       <!-- First Image (Sticky Centered) -->
       <div class="sticky top-[100px] h-[80vh] flex items-center justify-center z-10">

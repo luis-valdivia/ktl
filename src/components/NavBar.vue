@@ -16,11 +16,20 @@ export default {
   methods: {
     handleScroll() {
       const currentScrollPos = window.pageYOffset
-      if (this.prevScrollpos > currentScrollPos) {
+      const scrollDelta = currentScrollPos - this.prevScrollpos
+    
+      // Ignore tiny scrolls that are likely browser chrome moving
+      const isSignificant = Math.abs(scrollDelta) > 10
+    
+      if (!isSignificant) return
+    
+      // Don't hide navbar if near the top of the page (mobile auto-scroll)
+      if (currentScrollPos < 100) {
         this.isNavHidden = false
       } else {
-        this.isNavHidden = true
+        this.isNavHidden = scrollDelta > 0 // hide if scrolling down
       }
+    
       this.prevScrollpos = currentScrollPos
     },
     toggleMobileMenu() {
@@ -35,7 +44,7 @@ export default {
 
 <template>
   <nav
-    class="shadow fixed top-0 w-full z-10"
+    class="shadow fixed top-0 w-full z-30"
     :class="{ 'nav-hidden': isNavHidden }"
   >
     <div class="max-w-7xl mx-auto px-3 sm:px-7 lg:px-8">
@@ -98,7 +107,7 @@ export default {
     <transition name="fade">
       <div
         v-if="mobileMenuOpen"
-        class="md:hidden fixed inset-0 bg-gray-800 bg-opacity-90 z-20 flex flex-col items-center justify-center space-y-6 text-white text-xl"
+        class="md:hidden fixed inset-0 bg-gray-800 bg-opacity-90 z-40 flex flex-col items-center justify-center space-y-6 text-white text-xl"
       >
         <a
           href="/"
