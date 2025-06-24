@@ -64,12 +64,12 @@ export default {
     </div>
     <!-- Scroll Prompt -->
     <div class="-mt-20 mb-20 text-center animate-bounce">
-      <p 
+      <!-- <p 
         style="color: var(--lavender-pink);"
         class="text-lg font-medium"
       >
         Scroll down to see the magic happen
-      </p>
+      </p> -->
       <svg
         class="w-6 h-6 mx-auto mt-2 text-gray-100"
         fill="none"

@@ -10,7 +10,7 @@
       📍 Durham, NC
     </p>
     <p class="mb-2 text-4xl">
-      📞 (919) 225-5906
+      📞 (310) 990-2506
     </p>
     <p 
       style="color: var(--lavender-pink);"
