@@ -1,7 +1,7 @@
 <template>
   <section class="py-12 bg-green-50 rounded-2xl shadow-md">
     <h2 
-      style="color: var(--rich-black);"
+      style="color: var(--highlight);"
       class="text-3xl font-bold text-center mb-8"
     >
       Our Services
@@ -14,7 +14,7 @@
         class="p-6 rounded-xl shadow hover:shadow-lg transition"
       >
         <h3 
-          style="color: var(--lavender-pink);"
+          style="color: var(--rich-black);"
           class="text-xl font-semibold text-green-700 mb-2"
         >
           {{ service.title }}
@@ -31,27 +31,39 @@
 const services = [
   {
     title: 'Lawn Care & Maintenance',
-    description: 'Mowing, edging, fertilizing, and seasonal treatments to keep your lawn lush and healthy.',
-  },
-  {
-    title: 'Landscape Design',
-    description: 'Custom designs that blend aesthetics, functionality, and sustainability.',
+    description: 'Mowing, weedeating, edging, and blowing to keep your lawn well maintained.',
   },
   {
     title: 'Mulching & Bed Edging',
     description: 'Professional mulching to suppress weeds and retain soil moisture, plus crisp bed edges.',
   },
   {
-    title: 'Tree & Shrub Planting',
-    description: 'Add structure and beauty with expertly placed greenery tailored to your environment.',
+    title: 'Tree & Shrub Trimming',
+    description: 'Get small trees and hedges back in shape.',
   },
   {
     title: 'Hardscaping',
-    description: 'Patios, paths, and retaining walls built for both durability and style.',
+    description: 'Patios, paths, and small retaining walls built for both durability and style.',
   },
   {
     title: 'Seasonal Cleanups',
     description: 'Leaf removal, storm cleanup, and garden refreshes — we handle the mess so you don’t have to.',
+  },
+  {
+    title: 'Junk Hauls',
+    description: 'Got a bunch of stuff to get rid of? We have a dump trailer.',
+  },
+  {
+    title: 'Driveway Pressure Washing',
+    description: 'Ground level pressure washing, at more affordable rates.',
+  },
+  {
+    title: 'Handywork',
+    description: 'Need furniture assembled? A fence stained? Minor repair work? All of the above? Yes, I can do that.',
+  },
+  {
+    title: 'Landscape Design',
+    description: 'Custom designs that blend aesthetics, functionality, and sustainability.',
   },
 ]
 </script>

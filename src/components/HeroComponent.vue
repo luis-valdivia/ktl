@@ -2,8 +2,8 @@
 export default {
   data() {
     return {
-      catchphrase_part_1: 'In case of lawn care...',
-      catchphrase_part_2: '...call the lawn bear!',
+      catchphrase_part_1: 'Landscaping...',
+      catchphrase_part_2: '...Koala-T tested!',
     }
   },
   mounted() {
@@ -65,7 +65,7 @@ export default {
     <!-- Scroll Prompt -->
     <div class="-mt-20 mb-20 text-center animate-bounce">
       <!-- <p 
-        style="color: var(--lavender-pink);"
+        style="color: var(--highlight);"
         class="text-lg font-medium"
       >
         Scroll down to see the magic happen

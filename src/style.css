@@ -3,9 +3,9 @@
 @import 'tailwindcss/utilities';
 
 :root {
-  --lavender-pink: #F4B7D9ff;
+  --highlight: #9AA17B;
   --rich-black: #0A0F16ff;
-  --cadet-gray: #788B98;
+  --cadet-gray: #a0aebc;
   
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color-scheme: light dark;

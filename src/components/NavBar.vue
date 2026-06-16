@@ -52,8 +52,8 @@ export default {
         <!-- Logo -->
         <div class="flex-shrink-0">
           <img
-            class="h-16 w-16"
-            src="../assets/logo.png"
+            class="h-10 w-25"
+            src="../assets/simplified_logo.png"
             alt="Logo"
           >
         </div>
@@ -83,7 +83,7 @@ export default {
         <!-- Mobile Hamburger -->
         <div class="md:hidden">
           <button
-            style="color: var(--lavender-pink);"
+            style="color: var(--highlight);"
             class="text-gray-200 hover:text-white focus:outline-none"
             @click="toggleMobileMenu"
           >
@@ -151,7 +151,7 @@ nav {
 
 .nav-link {
   @apply text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-medium;
-  color: var(--lavender-pink);
+  color: var(--highlight);
 }
 
 .fade-enter-active, .fade-leave-active {
